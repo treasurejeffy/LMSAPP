@@ -33,5 +33,6 @@
 
 .cardicon{
     cursor: pointer;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 20px;
 }
