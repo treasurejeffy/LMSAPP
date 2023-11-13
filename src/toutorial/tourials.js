@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card, Container, Row,Modal, Form, FormControl, FormCheck, Col, Toast } from "react-bootstrap";
 import TUTORScss from './tourials.module.css'
-import {EnvelopeOpen, PencilSquare, PlusLg } from "react-bootstrap-icons";
+import {EnvelopeOpen, Facebook, Github, Instagram, PencilSquare, PlusLg, Twitter } from "react-bootstrap-icons";
 import Tutors from './tourials.json'
 
 export default function Tutorial() {
@@ -27,28 +27,28 @@ console.log(img)
     return(
         <section className={TUTORScss.TUTORS}>
             <Container>
-                <h2 className={`text-center py-3 ${TUTORScss.header}`}>OUR TUTORIALS</h2>
+                <h2 className={`text-center pt-4 pb-3 ${TUTORScss.header}`}>OUR TUTORS</h2>
                 <Row xl={3} lg={3} md={2} sm={2} xs={1}>
                     {/* where tutors data are mapped out. */}
                     {jsonData.map((ourTutors,index,jsonData)=>{
                         return(
                         <div key={index}>
-                                <Card  className={` ${TUTORScss.ourTutorscard} my-2 border-0`} >
-                                    <Card.Img src={ ourTutors.img || ourTutors.img.name} className="img-fluid"/>
-                                    <p className={TUTORScss.ourTutorsname}>{ourTutors.name}</p>
+                                <Card  className={`text-center ${TUTORScss.ourTutorscard} my-2 rounded-4`} >
+                                    <div className={`text-center mt-4 ${TUTORScss.cardImg}`}>
+                                        <img src={ ourTutors.img} className={`${TUTORScss.cardimg}`}/>
+                                    </div>
                                     <Card.Body className="text-center">
+                                        <Card.Title className={TUTORScss.ourTutorsname}>{ourTutors.name}</Card.Title>
                                         <Card.Subtitle className={TUTORScss.ourTutorscourse}>Course: {ourTutors.course}</Card.Subtitle>
-                                    </Card.Body>
-                                    <Card.Footer className="text-center border-0">
-                                        <div>                                           
-                                            <Button className={`${TUTORScss.cardFooterBtn}btn btn-primary btn-sm mx-3 pb-2 px-2   rounded-5`}>
-                                            <EnvelopeOpen className={`  ${TUTORScss.cardicon}`} title="send E-mail"/>
-                                            </Button>                                        
-                                            <Button className={`${TUTORScss.cardFooterBtn}btn btn-danger btn-sm mx-3 pb-2 px-2   rounded-5`}>
-                                                <PencilSquare className={` ${TUTORScss.cardicon}`} title="Edit profile"/>
-                                            </Button>                                            
+                                        <div className="mt-3">
+                                           <Button className="rounded-5 btn btn-primary mx-1 btn-sm"><Instagram/></Button>
+                                            <Button  className="rounded-5 btn btn-primary mx-1 btn-sm"><Twitter/></Button>
+                                            <Button  className="rounded-5 btn btn-primary mx-1 btn-sm"><Github/></Button>
                                         </div>
-                                    </Card.Footer>
+                                    </Card.Body>
+                                    <div>
+                                        <Button className={`btn mb-4 px-5 mt-3 ${TUTORScss.cardBtn}`}> <b> EDIT </b></Button>
+                                    </div>
                                 </Card>
                         </div>
                         )

@@ -1,28 +1,27 @@
 .TUTORS{
-    background-color: pink;   
+    background-image: url("https://media.istockphoto.com/id/1396126212/vector/abstract-blurred-background-defocused-pink-gradient.jpg?s=612x612&w=0&k=20&c=JpPHzLqega29qkVu35JShqDeWD2PFUhoLcGMYu7A6GM=");
+    background-size: cover;
 }
 
 .header{
     letter-spacing:  1px;
 }
 
-.ourTutorscard:hover{
-    background-color: #e8e2e2;
-   transform: scaleY(1.1); 
+.ourTutorscard{
+    border: #2f5bab solid 1px;
+    background-color: rgba(245, 245, 245, 0.4); 
 }
 
-.ourTutorscard{
-    background-color: #fdf4f4;
+.cardimg{
+    height: 170px;
+    width: 50%;
+    border-radius: 100px;
 }
 
 .ourTutorsname{
-    position: absolute;
-    right: 15px;
-    top: 20px;
     color: #2f5bab;
-    font-weight: bold;
+    font-weight: 400;
     letter-spacing: 2px;
-    font-size: small;
 }
 
 .ourTutorscourse{
