@@ -56,7 +56,7 @@ console.log(img)
                 </Row>
             </Container>
             <div className="position-relative">
-                <Button className="btn btn-light rounded-5 my-3 mx-2 position-absolute bottom-0 end-0"  onClick={handleShow}><PlusLg/></Button>
+                <Button className="btn btn-primary rounded-5  position-absolute bottom-0 end-0"  title="Add a tutor" onClick={handleShow}><PlusLg/></Button>
             </div>
             <Modal show={show} onHide={handleClose} className="bg-light">
                 <Modal.Header closeButton className="border-0">
